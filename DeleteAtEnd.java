@@ -1,5 +1,3 @@
-// Simple program to delete the last node (end) of a Singly Linked List
-
 public class DeleteAtEnd {
 
     // Simple Node definition
@@ -13,19 +11,17 @@ public class DeleteAtEnd {
         }
     }
 
-    // Function to delete the last node
+
     public static Node deleteLast(Node head) {
-        // Case 1: Empty list
+        // Case 1: Empty list if statement
         if (head == null) {
             System.out.println("List is empty.");
             return null;
         }
-
         // Case 2: Only one node in the list
         if (head.next == null) {
             return null;
         }
-
         // Case 3: More than one node
         // Stop at the second-to-last node
         Node current = head;
@@ -38,7 +34,7 @@ public class DeleteAtEnd {
         return head;
     }
 
-    // Helper to print the list
+    // print the list
     public static void printList(Node head) {
         if (head == null) {
             System.out.println("Empty List");
@@ -61,10 +57,11 @@ public class DeleteAtEnd {
         System.out.print("Before deleting at end: ");
         printList(head);
 
-        // 2. Delete at end (removes 30)
+        // 2. Delete at end (removes 30)/last number
         head = deleteLast(head);
 
         System.out.print("After deleting at end : ");
         printList(head);
     }
 }
+

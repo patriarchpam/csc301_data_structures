@@ -3,21 +3,22 @@ import java.util.Arrays;
 /**
  * CSC 301: Data Structures - Individual Assignment
  * Student Name: Pam Patriarch
- * Matric No:    VUG/SEN/24/12478
+ * Matric No: VUG/SEN/24/12478
  *
  * Question 13: Priority Queue (Binary Min-Heap Implementation)
  *
  * Concept:
  * - A Priority Queue retrieves the highest priority (minimum value in Min-Heap)
- *   element first, rather than following FIFO order.
+ * element first, rather than following FIFO order.
  * - Stored in a contiguous 1D array representing a complete binary tree:
- *   - Parent index: (i - 1) / 2
- *   - Left Child:   2 * i + 1
- *   - Right Child:  2 * i + 2
- * - insert(val):    Appends at end and percolates UP in O(log n).
- * - extractMin():   Replaces root with last element and percolates DOWN in O(log n).
- * - peek():         Inspects root heap[0] in O(1).
- * - Time Complexity:  Insert O(log n), Extract O(log n), Peek O(1)
+ * - Parent index: (i - 1) / 2
+ * - Left Child: 2 * i + 1
+ * - Right Child: 2 * i + 2
+ * - insert(val): Appends at end and percolates UP in O(log n).
+ * - extractMin(): Replaces root with last element and percolates DOWN in O(log
+ * n).
+ * - peek(): Inspects root heap[0] in O(1).
+ * - Time Complexity: Insert O(log n), Extract O(log n), Peek O(1)
  * - Space Complexity: O(n)
  */
 public class Question13_PriorityQueue {
@@ -44,12 +45,14 @@ public class Question13_PriorityQueue {
         }
 
         public int peek() {
-            if (isEmpty()) throw new IllegalStateException("Priority Queue is empty");
+            if (isEmpty())
+                throw new IllegalStateException("Priority Queue is empty");
             return heap[0];
         }
 
         public int extractMin() {
-            if (isEmpty()) throw new IllegalStateException("Priority Queue is empty");
+            if (isEmpty())
+                throw new IllegalStateException("Priority Queue is empty");
             int minVal = heap[0];
             heap[0] = heap[size - 1];
             size--;
@@ -112,7 +115,7 @@ public class Question13_PriorityQueue {
         System.out.println("=================================================\n");
 
         MinPriorityQueue pq = new MinPriorityQueue(5);
-        int[] elements = {25, 12, 5, 18, 9, 20, 14};
+        int[] elements = { 25, 12, 5, 18, 9, 20, 14 };
 
         System.out.print("Inserting elements: ");
         for (int x : elements) {
