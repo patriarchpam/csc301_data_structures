@@ -14,9 +14,8 @@ public class Fibonacci {
     }
 
     public static void main(String[] args) {
-        System.out.println("First value fib(0): " + fib(0));
-        System.out.println("Second value fib(1): " + fib(1));
-        System.out.println("6th value fib(5): " + fib(5));
+        System.out.println("First value fib(0): " + fib(10));
+        System.out.println("Second value fib(1): " + fib(11));
+        System.out.println("6th value fib(5): " + fib(15));
     }
 }
-
